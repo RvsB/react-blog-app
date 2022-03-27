@@ -1,4 +1,4 @@
-const BlogList = ({ blogs, title, handleDelete }) => { //we could use destructuring too here(we destructure from the props directly by saying what properties we want from them), by saying ({ blogs, title }) instead of (props).
+const BlogList = ({ blogs, title }) => { //we could use destructuring too here(we destructure from the props directly by saying what properties we want from them), by saying ({ blogs, title }) instead of (props).
     // const blogs = props.blogs;
     // const title = props.title;
 
@@ -9,7 +9,7 @@ const BlogList = ({ blogs, title, handleDelete }) => { //we could use destructur
                 <div className="blog-preview" key={blog.id}>
                     <h2>{ blog.title }</h2>
                     <p>Written by { blog.author }</p>
-                    <button onClick={() => { handleDelete(blog.id); }}>Delete Blog!</button>
+                    {/* <button onClick={() => { handleDelete(blog.id); }}>Delete Blog!</button> */}
                 </div>
             ))}
         </div>
