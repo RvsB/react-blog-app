@@ -8,10 +8,10 @@ const useFetch = (url) => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const abortCont = new AbortController();
+        const abortCont = new AbortController(); //for aborting the fetch
 
         setTimeout(() => {
-            fetch(url, { signal: abortCont.signal })
+            fetch(url, { signal: abortCont.signal }) //we pass all the properties we need for the fetch as an object argument
             .then(res => {
                 if(!res.ok) {
                     throw Error('could not fetch the data for that resource')
