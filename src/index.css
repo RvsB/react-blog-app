@@ -106,3 +106,29 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+/* not found component */
+
+.not-found h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 8px;
+}
+
+.not-found p {
+  margin-bottom: 8px;
+}
+
+.not-found-link {
+  display: block;
+  font-weight: bold;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #f1356d;
+  transition: all .2s;
+}
+
+.not-found-link:hover {
+  color: #e2137a;
+  transform: translateY(-3px);
+}

@@ -3,6 +3,7 @@ import Home from './Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Create from './Create';
 import BlogDetails from './BlogDetails';
+import NotFound from './NotFound';
 
 function App() {
   //const likes = 50; //here it is a number, but it doesnt matter because react is gonna convert whatever datatype we use to a string before it outputs it to the browser
@@ -24,6 +25,9 @@ function App() {
 						</Route>
 						<Route path="/blogs/:id"> {/*using colon we define a route parameter */} 
 							<BlogDetails />
+						</Route>
+						<Route path="*"> {/* "*" means catch any other routes and we should include it in the bottom only because else it will catch the other routes too */}
+							<NotFound />
 						</Route>
 					</Switch>
 				</div>

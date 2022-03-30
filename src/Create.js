@@ -35,7 +35,7 @@ const Create = () => {
                 <input 
                     type="text"
                     required
-                    value={title}
+                    value={title}//when the value of title changes it gets reflected here, when we try to change value, onchange gets triggered and it records our input and setTitle to that recorded input and then when we set value={title}, it shows us what we entered in the input field.
                     onChange={(e) => setTitle(e.target.value)} //e is event object
                 />
                 <label>Blog body:</label>
